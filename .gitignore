@@ -1,0 +1,3 @@
+mykernel.elf
+kernel.o
+loader.o
