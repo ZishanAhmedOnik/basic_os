@@ -1,4 +1,5 @@
 #include "types.h"
+#include "gdt.h"
 
 void printf(const int8_t* str)
 {
@@ -13,6 +14,8 @@ void printf(const int8_t* str)
 extern "C" void kernelMain(void* multiboot_structure, uint32_t magicnumber)
 {
     printf("Hello VM World! with types :/");
+
+    GlobalDescriptorTable gdt;
 
     while(true) {};
 }
