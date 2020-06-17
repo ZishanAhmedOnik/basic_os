@@ -1,8 +1,8 @@
-GPPPARAMS = -ffreestanding -g -c
+GPPPARAMS = -ffreestanding -fno-exceptions -fno-rtti -g -c
 ASPARAMS = --32
 LDPARAMS = -ffreestanding -nostdlib -g -T
 
-objects = loader.o gdt.o kernel.o
+objects = loader.o gdt.o port.o kernel.o
 
 %.o: %.cpp
 	/home/zonik42/i686-elf-4.9.1-Linux-x86_64/bin/i686-elf-g++ $(GPPPARAMS) -o $@ -c $<
